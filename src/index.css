@@ -1,13 +1,145 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*:focus{
+  outline: none;
+}
+
+.header{
+  text-align: center;
+  background-color: #F1C40F ;
+  padding: 10px 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
+}
+
+.header h4{
+  color: #fff;
+  font-size: 30px;
+  margin:0;
+  text-transform: uppercase;
+}
+
+.main_note{
+  position: relative;
+  width: 300px;
+  margin: 30px auto;
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow:  8px 8px 15px #dbdbdb, 
+               -8px -8px 15px #ffffff;
+}
+
+.main_note input{
+    width: 90%;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border: transparent;
+    font-weight: bold;
+    border-bottom: 2px solid #ABB2B9 ;
+}
+
+.main_note textarea{
+  width: 90%;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: transparent;
+  font-weight: bold;
+  border-bottom: 2px solid #ABB2B9 ;
+}
+
+.main_note .btn{
+  position: absolute;
+  bottom: -20px;
+  left: 40%;
+  background-color: #F1C40F;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
+}
+
+.main_note .btn:hover{
+ background-color: #F4D03F;
+}
+
+.notes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:30px 20px;
+  justify-content: center;
+}
+
+.note{
+  position: relative;
+  width: 250px;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow:  8px 8px 15px #dbdbdb, 
+               -8px -8px 15px #ffffff;
+}
+.note h2{
+  margin: 5px;
+  text-transform: capitalize;
+}
+
+.note p{
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+
+.note .deletebtn{
+  position: absolute;
+  bottom: -18px;
+  left: 45%;
+  background-color: #F1C40F;
+  color: #fff;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
+}
+
+.note .deletebtn:hover{
+ background-color: #F4D03F;
+}
+
+.footer{
+  padding: 5px 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background-color:#F8F9F9;
+  font-weight: bold;
+  color: #ABB2B9;
+}
+
+.footer p{
+  text-align: center;
+}
+
+
+@media (max-width: 800px) {
+  .notes {
+    flex-direction: column;
+  }
+
+  .note{
+    width: 90%;
+    margin: 20px 10px;
+  }
 }
